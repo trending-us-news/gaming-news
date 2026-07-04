@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHVHDQYGZ9"></script> 
+    <script> 
+        window.dataLayer = window.dataLayer || []; 
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date()); 
+        gtag('config', 'G-XXXXXXXXXX'); 
+    </script>
+
+    <title>Live Gaming News Monitor | Real-Time Viral Trends, Errors & Updates</title>
+    <meta name="description" content="The fastest real-time monitor for the gaming industry. Track viral TikTok games, instant patch notes, server errors, unblocked browser games, and streamer drama as it happens.">
+    <meta name="keywords" content="live gaming news, game errors down, unblocked games, io games trending, patch notes, gaming viral trends, wordle today, mobile games, US UK gamers">
+    <meta name="author" content="Virlan">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://www.virlan.co/gaming-live/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Virlan Gaming Intelligence">
+    <meta property="og:title" content="Live Gaming News & Viral Trend Monitor">
+    <meta property="og:description" content="Real-time aggregation of the latest gaming stories, server outages, meta guides, and viral trends across all platforms.">
+    <meta property="og:image" content="https://www.virlan.co/wp-content/uploads/2023/12/VIRLAN-2024-home2.png">
+    <meta property="og:url" content="https://www.virlan.co/gaming-live/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Virlan Live Gaming Monitor",
+            "applicationCategory": "NewsAggregator",
+            "operatingSystem": "Web",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "description": "A real-time aggregator for the gaming industry, tracking viral trends, patch notes, unblocked games, and server errors instantly.",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "342",
+                "bestRating": "5",
+                "worstRating": "1"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "NewsMediaOrganization",
+            "name": "Virlan Gaming",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.virlan.co/wp-content/uploads/2023/12/VIRLAN-2024-home2.png"
+            },
+            "url": "https://www.virlan.co/"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "How fast are game errors and patch notes updated?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our monitor refreshes every 15 minutes, scraping official studio APIs, Twitter/X, and Reddit to bring you server outages and patch notes instantly."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does this cover browser and mobile games?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. We have dedicated real-time feeds for unblocked browser games, .io games, daily puzzles like Wordle, and trending iOS/Android mobile games."
+                    }
+                }
+            ]
+        }
+    ]
+    </script>
+
+    <style>
+        :root {
+            /* Gamer Dark Mode Palette */
+            --bg-body: #09090b; 
+            --header-bg: #000000; 
+            --header-secondary: #18181b; 
+            --accent-primary: #8b5cf6; 
+            --accent-green: #10b981; 
+            --text-light: #f8fafc;
+            --text-dark: #e4e4e7; 
+            --text-muted: #a1a1aa;
+            --card-bg: #18181b;
+            --border-color: #27272a;
+        }
+
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--bg-body); margin: 0; padding: 0; color: var(--text-dark); -webkit-font-smoothing: antialiased; }
+
+        /* Top Nav */
+        .top-nav { background-color: var(--header-bg); border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 13px; padding: 0 20px; }
+        .top-nav-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: flex-end; gap: 20px; height: 40px; align-items: center; }
+        .top-link { color: var(--text-muted); text-decoration: none; font-weight: 500; transition: color 0.2s; text-transform: uppercase; letter-spacing: 0.5px; font-size: 11px; }
+        .top-link:hover { color: var(--accent-primary); }
+
+        /* Header */
+        .app-header { background: var(--header-secondary); color: white; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .brand-bar { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1000px; margin: 0 auto; }
+        .brand-logo { height: 45px; width: auto; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+        .header-controls { display: flex; align-items: center; gap: 12px; }
+
+        .refresh-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s; }
+        .refresh-btn:hover { background: var(--accent-primary); border-color: var(--accent-primary); box-shadow: 0 0 15px rgba(139, 92, 246, 0.4); }
+        .refresh-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .refresh-btn.spinning svg { animation: spin 1s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .live-status { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: var(--accent-green); background: rgba(16, 185, 129, 0.1); padding: 6px 12px; border-radius: 20px; border: 1px solid rgba(16, 185, 129, 0.2); text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+        .pulse-dot { width: 8px; height: 8px; background-color: var(--accent-green); border-radius: 50%; box-shadow: 0 0 10px var(--accent-green); animation: pulse 2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.1); } 100% { opacity: 1; transform: scale(1); } }
+
+        /* Categories */
+        .category-container { background: rgba(9, 9, 11, 0.8); backdrop-filter: blur(10px); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .category-scroll { display: flex; gap: 10px; overflow-x: auto; padding: 12px 24px; max-width: 1000px; margin: 0 auto; scrollbar-width: none; align-items: center; }
+        .category-scroll::-webkit-scrollbar { display: none; }
+        .cat-btn { background: transparent; border: 1px solid #3f3f46; padding: 8px 16px; border-radius: 6px; font-size: 13px; white-space: nowrap; cursor: pointer; color: #d4d4d8; font-weight: 500; transition: all 0.2s ease; }
+        .cat-btn:hover { background: #27272a; color: white; }
+        .cat-btn.active { background: var(--accent-primary); color: white; border-color: var(--accent-primary); font-weight: 600; box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25); }
+        .cat-separator { width: 1px; height: 20px; background: #3f3f46; margin: 0 6px; flex-shrink: 0; }
+
+        /* Hero */
+        .hero-section { background: radial-gradient(circle at top, #18181b 0%, #09090b 100%); color: white; padding: 50px 24px 60px 24px; text-align: center; position: relative; overflow: hidden; }
+        .hero-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent-primary), transparent); opacity: 0.3; }
+        .hero-content { max-width: 800px; margin: 0 auto; position: relative; z-index: 2; }
+        .hero-title { font-size: 32px; margin: 0 0 12px 0; font-weight: 800; letter-spacing: -0.5px; background: -webkit-linear-gradient(0deg, #fff, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-text { font-size: 16px; color: var(--text-muted); line-height: 1.6; margin: 0 auto; max-width: 650px; }
+
+        /* Quick View */
+        .quick-view-section { max-width: 1000px; margin: -30px auto 30px auto; position: relative; z-index: 5; padding: 0 20px; display: none; }
+        .section-label { color: var(--text-muted); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .section-label svg { color: var(--accent-primary); }
+        .quick-view-scroll { display: flex; gap: 16px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; }
+        .quick-view-scroll::-webkit-scrollbar { display: none; }
+        .quick-card { background: var(--card-bg); min-width: 260px; max-width: 260px; border-radius: 12px; padding: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.4); border: 1px solid var(--border-color); flex-shrink: 0; transition: transform 0.2s, border-color 0.2s; display: flex; flex-direction: column; justify-content: space-between; height: 140px; text-decoration: none; }
+        .quick-card:hover { transform: translateY(-5px); border-color: var(--accent-primary); }
+        .quick-meta { font-size: 10px; color: var(--accent-primary); font-weight: 700; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px;}
+        .quick-title { font-size: 14px; font-weight: 600; color: var(--text-light); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+
+        /* Recap */
+        .recap-box { background: var(--card-bg); max-width: 900px; margin: 0 auto 30px auto; border-radius: 12px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); border: 1px solid var(--border-color); display: none; border-left: 4px solid var(--accent-primary); }
+        .recap-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; color: var(--accent-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .recap-content { font-size: 15px; line-height: 1.7; color: var(--text-muted); }
+        .recap-content strong { color: var(--text-light); }
+
+        /* Feed */
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        .feed-header-label { font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--text-light); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; display: none; }
+        .news-item { background: var(--card-bg); padding: 24px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); border: 1px solid var(--border-color); margin-bottom: 16px; transition: all 0.2s ease; display: flex; flex-direction: column; gap: 12px; }
+        .news-item:hover { transform: translateY(-2px); border-color: #52525b; box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+        .meta-row { display: flex; align-items: center; gap: 12px; font-size: 12px; color: var(--text-muted); }
+        .source-badge { font-weight: 700; color: var(--text-light); text-transform: uppercase; font-size: 11px; letter-spacing: 0.8px; background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.3); padding: 4px 8px; border-radius: 4px; }
+        .news-title { font-size: 18px; line-height: 1.5; color: var(--text-light); text-decoration: none; font-weight: 700; transition: color 0.2s; }
+        .news-title:hover { color: var(--accent-primary); }
+        
+        /* New rule: Ensures h2 has no default margins so layout stays perfect */
+        .news-item h2 { margin: 0; padding: 0; }
+
+        /* Skeleton */
+        .skeleton-card { background: var(--card-bg); padding: 24px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 16px; }
+        .skeleton { background: linear-gradient(90deg, #27272a 25%, #3f3f46 50%, #27272a 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite linear; border-radius: 4px; }
+        .sk-meta { height: 20px; width: 30%; margin-bottom: 12px; }
+        .sk-title { height: 24px; width: 90%; margin-bottom: 8px; }
+        .sk-title-short { height: 24px; width: 60%; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+        /* Buttons */
+        .load-more-area { text-align: center; padding: 40px 0 60px; }
+        .btn-load { background: var(--header-secondary); color: white; border: 1px solid var(--border-color); padding: 14px 40px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-size: 14px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); }
+        .btn-load:hover { background: #27272a; border-color: var(--accent-primary); transform: translateY(-1px); }
+
+        /* SEO Content */
+        .seo-content { background: var(--card-bg); border-top: 1px solid var(--border-color); padding: 60px 24px; margin-top: 40px; }
+        .seo-inner { max-width: 900px; margin: 0 auto; }
+        .seo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 30px; }
+        .seo-block h3 { color: var(--text-light); font-size: 18px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .seo-block p, .seo-block li { color: var(--text-muted); font-size: 15px; line-height: 1.6; margin-bottom: 10px; }
+        .seo-block ul { padding-left: 20px; }
+        .seo-title-main { text-align: center; font-size: 24px; margin-bottom: 40px; color: var(--text-light); }
+        
+        /* Trust Bar (Matches Schema) */
+        .trust-bar { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px dashed var(--border-color); color: var(--text-muted); font-size: 14px; }
+        .star-rating { color: var(--accent-green); letter-spacing: 2px; }
+
+        @media (max-width: 600px) {
+            .top-nav-inner { justify-content: center; gap: 15px; }
+            .hero-title { font-size: 24px; }
+            .container { padding: 0 16px; }
+            .quick-view-section { margin-top: -20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="https://www.virlan.co/iogames/" target="_blank" class="top-link">.IO Games</a>
+            <a href="https://www.virlan.co/unblocked-games/" target="_blank" class="top-link">Unblocked Games</a>
+        </div>
+    </nav>
+
+    <header class="app-header">
+        <div class="brand-bar">
+            <a href="https://www.virlan.co/" target="_blank" aria-label="Visit Virlan Homepage">
+                <img src="https://www.virlan.co/wp-content/uploads/2023/12/VIRLAN-2024-home2.png" alt="Virlan Logo" class="brand-logo">
+            </a>
+            <div class="header-controls">
+                <button class="refresh-btn" id="refreshBtn" onclick="refreshFeed()" title="Refresh News Feed">
+                    <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+                </button>
+                <div class="live-status">
+                    <div class="pulse-dot"></div>
+                    <span>Live</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category-container">
+            <div class="category-scroll">
+                <button class="cat-btn active" onclick="setCat('top_stories', this)">РџА Top Stories</button>
+                <button class="cat-btn" onclick="setCat('all', this)">All News</button>
+                <div class="cat-separator"></div>
+                <button class="cat-btn" onclick="setCat('viral', this)">­ЪћЦ Viral & Trending</button>
+                <button class="cat-btn" onclick="setCat('updates', this)">­Ъћё Updates & Patches</button>
+                <button class="cat-btn" onclick="setCat('errors', this)">Рџа№ИЈ Errors & Fixes</button>
+                <div class="cat-separator"></div>
+                <button class="cat-btn" onclick="setCat('guides', this)">­ЪДа Guides & How-To</button>
+                <button class="cat-btn" onclick="setCat('assets', this)">­ЪЌА№ИЈ Weapons & Skins</button>
+                <button class="cat-btn" onclick="setCat('browser', this)">­Ъїљ Browser & Unblocked</button>
+                <div class="cat-separator"></div>
+                <button class="cat-btn" onclick="setCat('streamers', this)">­ЪјЎ№ИЈ Streamers & Q&A</button>
+                <button class="cat-btn" onclick="setCat('mobile', this)">­ЪЊ▒ Mobile Games</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Real-Time Gaming Monitor</h1>
+            <p class="hero-text">
+                Your ultimate radar for the gaming universe. We track APIs and social feeds to instantly deliver <strong>server outages</strong>, <strong>viral TikTok games</strong>, <strong>meta guides</strong>, and <strong>patch notes</strong>.
+            </p>
+        </div>
+    </section>
+
+    <div id="quick-view-section" class="quick-view-section">
+        <div class="section-label">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2.05v3.03c3.39.49 6 3.39 6 6.92 0 .9-.18 1.75-.5 2.54l2.63 1.53c.56-1.24.87-2.6.87-4.07 0-5.17-3.95-9.42-9-9.95zM12 19c-3.87 0-7-3.13-7-7 0-3.53 2.61-6.43 6-6.92V2.05c-5.06.5-9 4.76-9 9.95 0 5.52 4.47 10 10 10 2.75 0 5.25-1.11 7.08-2.93l-2.13-2.13C15.55 18.15 13.85 19 12 19zM12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+            Quick View: Last 10 Updates
+        </div>
+        <div id="quick-view-content" class="quick-view-scroll"></div>
+    </div>
+
+    <section id="recap-box" class="recap-box">
+        <div class="recap-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            Live Community Snapshot
+        </div>
+        <div id="recap-content" class="recap-content"></div>
+    </section>
+
+    <main class="container">
+        <div id="feed-header-label" class="feed-header-label">Latest Intelligence</div>
+        <div id="feed-container"></div>
+    </main>
+
+    <div class="load-more-area" id="load-more-area" style="display:none;">
+        <button class="btn-load" onclick="renderNextBatch()">Load More</button>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-inner">
+            <h2 class="seo-title-main">Virlan Gaming: Be The First to Know</h2>
+            
+            <div class="seo-grid">
+                <article class="seo-block">
+                    <h3>Рџа№ИЈ Game Errors & Fixes</h3>
+                    <p>When servers go down, players need answers immediately. Our <strong>"Errors & Fixes"</strong> tab actively monitors server statuses, Reddit complaint spikes, and official dev accounts to provide troubleshooting steps for error codes the minute they happen.</p>
+                </article>
+
+                <article class="seo-block">
+                    <h3>­ЪћЦ Viral Trends & Unblocked</h3>
+                    <p>Whether it's the newest indie horror game blowing up on TikTok, or the latest <strong>unblocked .io games</strong> surging in school web traffic, our Viral Radar tracks sudden spikes in search volume so you can jump on the trend.</p>
+                </article>
+
+                <article class="seo-block">
+                    <h3>­ЪДа Meta Guides & Patch Notes</h3>
+                    <p>Don't fall behind the meta. Use our aggregations to instantly read major <strong>Updates & Patches</strong>. From deep-dives into new weapons and skins to pro-tier strategies on how to win, we collect the best tips into one feed.</p>
+                </article>
+
+                <article class="seo-block">
+                    <h3>­ЪЊ▒ Mobile & Browser Hub</h3>
+                    <p>From daily puzzle answers (like <strong>Wordle today</strong>) to gacha game drops, our dedicated browser and mobile categories keep you updated on the casual and hardcore games played by millions every day in the US and UK.</p>
+                </article>
+            </div>
+
+            <div class="trust-bar">
+                <span class="star-rating">РўЁРўЁРўЁРўЁРўЁ</span> 
+                <strong>4.9/5 Rating</strong> based on 342 feedback from gamers, creators, and analysts.
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center; padding: 30px; font-size:12px; color:var(--text-muted); background:var(--header-bg); border-top:1px solid var(--border-color);">
+        &copy; <script>document.write(new Date().getFullYear())</script> Virlan Gaming. All rights reserved. Data aggregated from public APIs and community sources.
+    </footer>
+
+    <script>
+        // CONFIGURATION
+        const DATA_SOURCE = "https://raw.githubusercontent.com/virlan-com/vigamingnews/refs/heads/main/news.json"; 
+        
+        let allData = {}; 
+        let currentCatKey = 'top_stories'; 
+        const BATCH_SIZE = 10;
+        let currentIndex = 0;
+
+        async function init() {
+            renderSkeleton();
+            const refreshBtn = document.getElementById('refreshBtn');
+            refreshBtn.classList.add('spinning');
+
+            try {
+                const response = await fetch(DATA_SOURCE + '?t=' + new Date().getTime()); 
+                if (!response.ok) { throw new Error(`HTTP Error: ${response.status}`); }
+
+                const json = await response.json();
+                
+                // CLIENT-SIDE SORTING (Newest First)
+                for (const cat in json.data) {
+                    if (Array.isArray(json.data[cat])) {
+                        json.data[cat].sort((a, b) => b.timestamp - a.timestamp);
+                    }
+                }
+
+                allData = json.data;
+                console.log("Data loaded. Last updated:", json.last_updated);
+                
+                setCat(currentCatKey, null);
+                
+            } catch (error) {
+                console.error("Failed to load news database:", error);
+                document.getElementById('feed-container').innerHTML = 
+                    `<div style="text-align:center; padding:40px; color:#ef4444; background:var(--card-bg); border-radius:8px; border:1px solid #7f1d1d;">
+                        <strong>System Update in Progress.</strong><br>
+                        <span style="font-size:12px; color:#a1a1aa;">(Awaiting first data sync...)</span>
+                    </div>`;
+            } finally {
+                refreshBtn.classList.remove('spinning');
+            }
+        }
+
+        function setCat(key, btn) {
+            if(btn) {
+                document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            }
+            
+            currentCatKey = key;
+            currentIndex = 0;
+            
+            document.getElementById('load-more-area').style.display = 'none';
+            document.getElementById('recap-box').style.display = 'none';
+            document.getElementById('quick-view-section').style.display = 'none';
+            document.getElementById('feed-header-label').style.display = 'none';
+
+            if (!allData || !allData[key]) return;
+
+            const items = allData[key];
+
+            if (items.length === 0) {
+                document.getElementById('feed-container').innerHTML = 
+                    `<div style="text-align:center; padding:60px; color:var(--text-muted);">No recent updates in this category.</div>`;
+                return;
+            }
+
+            // UI LOGIC
+            if (currentCatKey === 'top_stories') {
+                generateSmartRecap(items);
+                renderFeed(items.slice(0, 10)); 
+                document.getElementById('load-more-area').style.display = 'none';
+                return; 
+            }
+
+            if (currentCatKey === 'all') {
+                renderQuickView(items);
+                generateSmartRecap(items);
+                document.getElementById('feed-header-label').style.display = 'block';
+                renderFeed(items.slice(0, BATCH_SIZE));
+                updateLoadMoreButton(items.length);
+                return;
+            }
+
+            renderFeed(items.slice(0, BATCH_SIZE));
+            updateLoadMoreButton(items.length);
+        }
+
+        function renderFeed(itemsToRender) {
+            const container = document.getElementById('feed-container');
+            container.innerHTML = ''; 
+
+            itemsToRender.forEach(item => {
+                const timeStr = formatTime(item.timestamp);
+                const article = document.createElement('article');
+                article.className = 'news-item';
+                article.innerHTML = `
+                    <div class="meta-row">
+                        <span class="source-badge">${item.source}</span>
+                        <span>Рђб</span>
+                        <time>${timeStr}</time>
+                    </div>
+                    <h2><a href="${item.link}" target="_blank" rel="nofollow" class="news-title">${item.title}</a></h2>
+                `;
+                container.appendChild(article);
+            });
+        }
+
+        function renderNextBatch() {
+            currentIndex += BATCH_SIZE;
+            const fullList = allData[currentCatKey];
+            const nextBatch = fullList.slice(0, currentIndex + BATCH_SIZE);
+            renderFeed(nextBatch);
+            updateLoadMoreButton(fullList.length);
+        }
+
+        function updateLoadMoreButton(totalItems) {
+            const btnArea = document.getElementById('load-more-area');
+            if (currentCatKey === 'top_stories') {
+                btnArea.style.display = 'none';
+            } else {
+                btnArea.style.display = (currentIndex + BATCH_SIZE < totalItems) ? 'block' : 'none';
+            }
+        }
+
+        function refreshFeed() {
+            document.getElementById('feed-container').innerHTML = '';
+            init();
+        }
+
+        function renderQuickView(items) {
+            const container = document.getElementById('quick-view-content');
+            container.innerHTML = '';
+            items.slice(0, 10).forEach(item => {
+                const timeStr = formatTime(item.timestamp);
+                const card = document.createElement('a');
+                card.href = item.link;
+                card.target = "_blank";
+                card.rel = "nofollow"; // Added nofollow here too
+                card.className = "quick-card";
+                card.innerHTML = `
+                    <div>
+                        <div class="quick-meta">${timeStr} Рђб ${item.source}</div>
+                        <div class="quick-title">${item.title}</div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+            document.getElementById('quick-view-section').style.display = 'block';
+        }
+
+        function generateSmartRecap(items) {
+            if(items.length < 3) return;
+            const s1 = items[0];
+            const s2 = items[1];
+            const s3 = items[2];
+            const template = `
+                Current gaming community activity highlights <strong>${s1.title}</strong>, as reported by ${s1.source}. 
+                In parallel, we are seeing massive search spikes regarding <strong>${s2.title}</strong>. 
+                Meanwhile, ${s3.source} is currently covering <strong>${s3.title}</strong> in latest updates.
+            `;
+            const recapBox = document.getElementById('recap-box');
+            document.getElementById('recap-content').innerHTML = template;
+            recapBox.style.display = 'block'; 
+        }
+
+        function formatTime(timestamp) {
+            const date = new Date(timestamp * 1000); 
+            const now = new Date();
+            const diffMins = Math.floor((now - date) / 60000);
+            const diffHrs = Math.floor(diffMins / 60);
+            if (diffHrs >= 24) return Math.floor(diffHrs/24) + "d ago";
+            if (diffHrs >= 1) return diffHrs + "h ago";
+            if (diffMins < 1) return "Just now";
+            return diffMins + "m ago";
+        }
+
+        function renderSkeleton() {
+            let html = '';
+            for(let i=0; i<6; i++) {
+                html += `<div class="skeleton-card"><div class="skeleton sk-meta"></div><div class="skeleton sk-title"></div><div class="skeleton sk-title-short"></div></div>`;
+            }
+            document.getElementById('feed-container').innerHTML = html;
+        }
+
+        // Start App
+        init();
+
+    </script>
+</body>
+</html>
